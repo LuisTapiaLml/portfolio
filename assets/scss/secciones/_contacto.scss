@@ -1,0 +1,40 @@
+
+
+.formulario-contacto{
+    background-color: #2b2b36;
+    width: 100%;
+    padding: 20px;
+
+    label{
+        display: flex;
+        border-radius: 2px;
+        margin-bottom: 30px;
+
+        .icono{
+            background-color: #20202A;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            font-weight: lighter;
+            color: #8b8b8d;
+            
+        }
+
+        input,textarea{
+            background-color: #242430;
+            border: none;
+            padding: 15px;
+            width: 100%;
+            font-family: 'Poppins-normal';
+            color: #ffffff;
+        }
+
+        &:last-child{
+            margin: 0;
+            .icono{
+                align-items: flex-start;
+            }
+        }
+    }
+}

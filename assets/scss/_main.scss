@@ -1,0 +1,59 @@
+@import './secciones/hero';
+@import './secciones/tecnologias';
+@import './secciones/proyectos';
+@import './secciones/contacto';
+
+
+main{
+    width: calc( 100% - #{ $desktop-aside-width });
+    height: 100%;
+    background-color: $main-background-color;
+    // padding: 30px;
+    scroll-behavior: smooth;
+
+    section{
+        padding: 30px;
+        width: 100%;
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.responsive-header{
+    position: fixed;
+    top: 0;
+    width: 100%; 
+    height: 50px;
+    background-color: #24242F;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    box-shadow: 3px 3px 3px #000;
+    display: none;
+
+}
+.boton-menu{
+        margin-right: 15px;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        color: #83838b;
+        padding: 5px;
+        font-size: 22px;
+}
+
+@media (max-width:650px){
+    main{
+        width: 100%;
+
+        section{
+            padding: 7px;
+        }
+    }
+    .responsive-header{
+        display: flex;
+    }
+}

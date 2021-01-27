@@ -1,0 +1,30 @@
+
+.hero{
+    background-image: linear-gradient(90deg,#201f29c0 0%, #201f29c0 20%, #201f29c0 50%, #201f29c0 80%, #201f29c0 100%) , url("./../img/hero.jpg")   ;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 300px;
+
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    >div{
+        background-image: linear-gradient(90deg,rgba(57, 57, 69, 0.8) 0%, rgba(57, 57, 69,.7) 20%, 80%, rgba(57, 57, 69 , .5) 100%) , url("./../img/hero.jpg")   ;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 100%;
+        padding: 15px;
+    }
+
+    h1{
+        font-family: 'Poppins-extra';
+        // font-weight: bolder;
+        font-size: 46px;
+
+    }
+
+}

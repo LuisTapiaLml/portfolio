@@ -1,0 +1,36 @@
+
+
+$desktop-aside-width : 290px;
+
+$background-color: #191923;
+
+$aside-background-color: #20202A ; 
+
+$main-background-color:#1E1E28  ;
+
+$font-color : #fff;
+
+@font-face{
+    font-family: "Poppins-normal";
+    src: url("../fonts/Poppins/Poppins-Regular.ttf");
+    font-weight: normal;
+}
+
+@font-face{
+    font-family: "Poppins-bold";
+    src: url("../fonts/Poppins/Poppins-SemiBold.ttf");
+    font-weight: bold;
+}
+
+@font-face{
+    font-family: "Poppins-light";
+    src: url("../fonts/Poppins/Poppins-Light.ttf");
+    font-weight: lighter;
+}
+
+
+@font-face{
+    font-family: "Poppins-extra";
+    src: url("../fonts/Poppins/Poppins-ExtraBold.ttf");
+}
+
