@@ -172,7 +172,7 @@ aside .boton-cerrar-menu {
   aside.activo {
     left: 0;
   }
-  aside .boton-cerar-menu {
+  aside .boton-cerrar-menu {
     display: flex;
   }
 }

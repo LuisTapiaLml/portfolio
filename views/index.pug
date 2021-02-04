@@ -76,8 +76,66 @@ html(lang="en")
                         h1 Portfolio
 
                 section
-                    h2 Tecnologias
+                    h2.titulo Tecnologias
 
-        
-        script(src="/public/js/main.js")
+                    .skills
+                        div
+                            i.fab.fa-html5
+                            span HTML5
+                        div 
+                            i.fab.fa-css3-alt
+                            span CSS3
+                        div
+                            i.fab.fa-js
+                            span JavaScript
+                        div
+                            i.fab.fa-sass
+                            span Sass
+                        div
+                            i.fab.fa-react
+                            span ReactJs
+                        div
+                            i.fab.fa-php
+                            span php
+                        div
+                            <img src="public/img/icons/microsoft-sql-server.svg" alt="">
+                            span SQL Server
+                        div
+                            i.fab.fa-github
+                            span Git
+                section
+                    h2.titulo Portfolio
+                    div.proyectos
+                        each info_proyecto in _proyectos
+                            article.proyecto
+                                .contenedor-imagen
+                                    img(src="public/img/" + info_proyecto.img , alt="imagen proyecto")
+                                .descripcion
+                                    span.titulo= info_proyecto.nombre
+                                    p=  info_proyecto.descripcion
+
+                                    a( class="link" target="_blank" href=info_proyecto.link ) Ir a proyecto 
+                                        .fas.fa-angle-right
+                
+                section
+                    h2.titulo Contacto
+                    form.formulario-contacto
+                        label
+                            .icono
+                                i.fas.fa-user-alt
+                            input(type="text" placeholder="Nombre")
+
+                        label
+                            .icono
+                                i.fas.fa-at
+                            input(type="text" placeholder="Email")
+
+                        label
+                            .icono
+                                i.fas.fa.fa-envelope
+                            textarea(name="", cols="30", rows="5" placeholder="Mensaje")
+
+                        button.btn Enviar Mensaje
+
+        script(src="/public/js/main.js" type="module")
 
