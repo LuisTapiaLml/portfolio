@@ -1,20 +1,18 @@
 const express = require('express');
-
 const app = express();
+const path = require('path');
 
-app.use( express.static( __dirname + '/public') );
+const portfoliorouter = require('./routes/routes');
 
-app.get('/',( req , res )=>{
+//app.set();
 
-    res.render('index.html');
+app.use( '/public', express.static(path.join(__dirname + '/public')) );
 
-});
+app.set("views", path.join(__dirname, "views"));
+
+app.set('view engine', 'pug');
+
+app.use('/', portfoliorouter );
 
 
-app.listen(3000,()=>{
-
-    console.log(__dirname);
-
-    console.log('Escuchando en el puerto: 3000');
-
-});
+app.listen(8080);

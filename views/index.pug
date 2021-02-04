@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Portfolio
+
+        link(rel="stylesheet", href="/public/css/all.min.css")
+        link(rel="stylesheet", href="/public/css/styles.css")
+    body
+
+        div.main-container
+            
+            header.responsive-header
+                button( class="boton-menu" data-accion="mostrar")
+                    i.fas.fa-bars
+            
+            aside
+                header.header-aside
+                    div.boton-cerrar-menu
+                        button.boton-menu(data-accion="ocultar")
+                            i.fas.fa-times
+                    
+                    .img-container
+                        img(src="https://fakeimg.pl/350x200/?text=LT", alt="profile image")
+
+                    p.nombre.titulo Luis Tapia
+                    p Full stack jr Developer
+                div
+                    section.info
+                        div
+                            span Paìs:
+                            span Mèxico
+                        div
+                            span Estado:
+                            span CDMX
+                        div
+                            span Edad:
+                            span 22
+                    
+                    section.idiomas
+                        article.idioma
+                            div.percent
+                                svg(viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                    circle( cx="120" cy="120" r="110" stroke="#191923" stroke-width="15" )
+                                    circle( cx="120" cy="120" r="110" stroke="#191923" stroke-width="15" ) 
+                                    path( stroke="#FFC107" stroke-width="15" d="M120 10C134.445 10 148.749 12.8452 162.095 18.3733C175.441 23.9013 187.567 32.0038 197.782 42.2183C207.996 52.4327 216.099 64.559 221.627 77.9048C227.155 91.2507 230 105.555 230 120C230 134.445 227.155 148.749 221.627 162.095C216.099 175.441 207.996 187.567 197.782 197.782C187.567 207.996 175.441 216.099 162.095 221.627C148.749 227.155 134.445 230 120 230C105.555 230 91.2506 227.155 77.9048 221.627C64.559 216.099 52.4327 207.996 42.2182 197.782C32.0038 187.567 23.9012 175.441 18.3732 162.095C12.8452 148.749 9.99999 134.445 10 120C10 105.555 12.8452 91.2506 18.3733 77.9048C23.9013 64.559 32.0038 52.4326 42.2183 42.2182C52.4328 32.0038 64.5591 23.9012 77.9049 18.3732C91.2507 12.8452 105.555 9.99999 120 10L120 10Z" )
+                                
+                                .number
+                                    p 100 
+                                        span % 
+                            
+                            .nombre-idioma Español
+                        article.idioma
+                            .percent
+                                svg( viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg" )
+                                    circle( cx="120" cy="120" r="110" stroke="#191923" stroke-width="15" )
+                                    circle( cx="120" cy="120" r="110" stroke="#191923" stroke-width="15" )
+                                    path( d="M120 10C140.286 10 160.178 15.6099 177.475 26.2096C194.772 36.8092 208.801 51.9857 218.011 70.061C227.221 88.1364 231.253 108.407 229.661 128.63C228.069 148.854 220.916 168.244 208.992 184.656C197.068 201.068 180.837 213.863 162.095 221.627C143.353 229.39 122.829 231.819 102.792 228.646C82.7555 225.472 63.9867 216.82 48.5607 203.645C33.1348 190.47 21.6526 173.285 15.3838 153.992" stroke="#FFC107" stroke-width="15" )
+                                .number
+                                    p 70
+                                        span %
+                            p.nombre-idioma Ingles
+                    
+                    section.descarga-cv
+                        a( href="/public/files/cv-Perez-tapia-Jose-Luis-.pdf" target="_blank") Descarga CV 
+                            i.fas.fa-download
+
+                footer.footer-aside Hola mamà
+                    
+
+
+            main    
+                .hero
+                    div
+                        h1 Portfolio
+
+                section
+                    h2 Tecnologias
+
+        
+        script(src="/public/js/main.js")
+
