@@ -21,10 +21,18 @@ botones_menu.forEach( boton_menu => {
 form.addEventListener('submit',async (e)=>{
     e.preventDefault();
 
-    const respuesta = await mensaje();
-
     let valores =  formulario('.formulario-contacto');
 
-    console.log( valores );
+    if(valores){
+
+        const respuesta = await mensaje( valores );
+    
+        console.log( respuesta );
+    
+    }else{
+
+        alert('hubo un error');
+    
+    }
 
 });

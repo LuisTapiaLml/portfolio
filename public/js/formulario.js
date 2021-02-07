@@ -5,19 +5,21 @@ const formulario =  ( elFormulario ) => {
 
     if(!formulario) return false;
 
-    const elementos = formulario.elements;
+    const elementos = formulario.querySelectorAll(".campo_data");
 
     let datos = {};
     
     console.log( typeof(elementos) );
 
-    // elementos.forEach( elemento => {
-        // console.log( elemento );
-        // if( elemento.value.trim() === "" ) return false;
+    elementos.forEach( elemento => {
+        
+        console.log( elemento );
+        
+        if( elemento.value.trim() === "" ) return false;
 
-        // datos[ elemento.name ] =  elemento.value;
+        datos[ elemento.name ] =  elemento.value;
 
-    //});
+    });
 
     return datos;
 }

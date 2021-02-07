@@ -1,7 +1,19 @@
 "use strict";
+const path = require('path');
 const nodemailer = require("nodemailer");
+const { mail } = require('../lib/mail');
 
 exports.visita = (req, res) => {
+
+    let email_data = { 
+        tipo : 'portfolio' , 
+        para : 'luistapialml@gmail.com',
+        motivo : 'Portfolio' ,
+        de : 'Pues tu',
+        mensaje : ''
+    }
+
+    mail( email_data );
 
     const info_proyectos = [
         {
@@ -27,10 +39,44 @@ exports.mensaje = (req, res) => {
 
     let datos =  req.body;
 
-    res.json({
-        estatus: 'ok',
-        mensaje: 'El correo se envio de manera correcta',
-    });
+    try {
+        let email_data = { 
+            tipo : 'confirmacion' , 
+            para : datos.email ,
+            motivo : 'Contacto' ,
+            de : '"Luis Tapia 👻" <luistapialml.2@gmail.com>' ,
+            mensaje : ''
+        }
+    
+        mail( email_data );
+    
+    
+        email_data = { 
+            tipo : 'contacto' , 
+            para : 'luistapialml@gmail.com',
+            motivo : 'Contacto' ,
+            de : `  ${ datos.email } ` ,
+            mensaje : ` <p>  ${ datos.nombre } _ ${ datos.email } </p>
+                     ${ datos.mensaje }`
+        }
+    
+        mail( email_data );
+
+        res.json({
+            estatus: 'ok',
+            mensaje: 'El correo se envio de manera correcta',
+        });
+
+    } catch (error) {
+        res.json({
+            estatus: 'error',
+            mensaje: 'No se pudo enviar el mensaje',
+        });
+
+        console.error(error);
+    }
+
+   
 
 };
 
@@ -39,11 +85,23 @@ exports.files = (req, res) => {
 
     let { file } = req.params;
 
-    console.log("arcihvo: " , file );
-
     if(file === 'cv' ){
 
-        res.send('aquì va tu cv');
+        let email_data = { 
+            tipo : 'cv' , 
+            para : 'luistapialml@gmail.com' ,
+            motivo : 'Vio cv' ,
+            de : '"Luis Tapia 👻" <luistapialml.2@gmail.com>' ,
+            mensaje : ''
+        }
+    
+        mail( email_data ).catch(console.error);
+
+        res.sendFile(path.resolve('.//public/files/cv-Perez-tapia-Jose-Luis.pdf'));
+
+    }else if( file === undefined ){
+
+        res.status(403).render('403');
 
     }else{
 

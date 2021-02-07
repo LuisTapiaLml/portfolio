@@ -9,7 +9,6 @@ router.get('/', portfolioController.visita );
 
 router.post( '/correo' , portfolioController.mensaje );
 
-router.get( '/public/files/:file' , portfolioController.files );
-
+router.get( ['/public/files/:file' , '/public/files/' ] , portfolioController.files );
 
 module.exports =  router;

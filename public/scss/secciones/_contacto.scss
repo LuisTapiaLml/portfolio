@@ -9,25 +9,32 @@
         display: flex;
         border-radius: 2px;
         margin-bottom: 30px;
-
+        width: 100%;
         .icono{
             background-color: #20202A;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 15px;
             font-weight: lighter;
             color: #8b8b8d;
-            
+            width: 50px;
         }
 
         input,textarea{
             background-color: #242430;
             border: none;
             padding: 15px;
-            width: 100%;
+            width: calc( 100% - 50px );
             font-family: 'Poppins-normal';
-            color: #ffffff;
+            color: #ffffff;     
+            display: block;
+            -webkit-box-sizing: border-box; // Safari/Chrome, other WebKit
+            -moz-box-sizing: border-box;    // Firefox, other Gecko
+            box-sizing: border-box;         // Opera/IE 8+
+        }
+
+        textarea{
+            height: 150px;
         }
 
         &:last-child{

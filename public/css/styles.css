@@ -17,7 +17,9 @@
   font-family: "Poppins-extra";
   src: url("../fonts/Poppins/Poppins-ExtraBold.ttf");
 }
-*, *::after, *::before {
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   outline: none;
 }
@@ -296,23 +298,31 @@ aside .boton-cerrar-menu {
   display: flex;
   border-radius: 2px;
   margin-bottom: 30px;
+  width: 100%;
 }
 .formulario-contacto label .icono {
   background-color: #20202A;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 15px;
   font-weight: lighter;
   color: #8b8b8d;
+  width: 50px;
 }
 .formulario-contacto label input, .formulario-contacto label textarea {
   background-color: #242430;
   border: none;
   padding: 15px;
-  width: 100%;
+  width: calc( 100% - 50px );
   font-family: "Poppins-normal";
   color: #ffffff;
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.formulario-contacto label textarea {
+  height: 150px;
 }
 .formulario-contacto label:last-child {
   margin: 0;
