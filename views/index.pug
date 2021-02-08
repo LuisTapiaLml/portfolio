@@ -5,6 +5,7 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Portfolio
 
+        link(rel="stylesheet", href="/public/css/sweetalert2.min.css")
         link(rel="stylesheet", href="/public/css/all.min.css")
         link(rel="stylesheet", href="/public/css/styles.css")
     body
@@ -123,7 +124,7 @@ html(lang="en")
                 
                 section
                     h2.titulo Contacto
-                    form.formulario-contacto
+                    form(class="formulario-contacto" novalidate ) 
                         label
                             .icono
                                 i.fas.fa-user-alt
@@ -132,7 +133,7 @@ html(lang="en")
                         label
                             .icono
                                 i.fas.fa-at
-                            input(type="text" id="email" name="email" class="campo_data" placeholder="Email")
+                            input(type="email" id="email" name="email" class="campo_data" placeholder="Email")
 
                         label
                             .icono
@@ -141,5 +142,6 @@ html(lang="en")
 
                         button.btn Enviar Mensaje
 
+        script(src="/public/js/sweetalert2.all.min.js" )
         script(src="/public/js/main.js" type="module")
 

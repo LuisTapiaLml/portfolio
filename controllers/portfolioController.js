@@ -26,7 +26,7 @@ exports.visita = async (req, res) => {
             mensaje : ''
         }
     
-        mail( email_data );
+        // mail( email_data );
 
     } catch (error) {
         
@@ -44,7 +44,7 @@ exports.visita = async (req, res) => {
 exports.mensaje = (req, res) => {
 
     let datos =  req.body;
-    console.log(datos);
+
     try {
 
         Mensajes.create({
@@ -57,7 +57,7 @@ exports.mensaje = (req, res) => {
             tipo : 'confirmacion' , 
             para : datos.email ,
             motivo : 'Contacto' ,
-            de : '"Luis Tapia 👻" <luistapialml.2@gmail.com>' ,
+            de : 'luistapialml.2@gmail.com' ,
             mensaje : ''
         }
     
@@ -67,7 +67,7 @@ exports.mensaje = (req, res) => {
         email_data = { 
             tipo : 'contacto' , 
             para : 'luistapialml@gmail.com',
-            motivo : 'Contacto' ,
+            motivo : `Contacto  _ ${ new Date().getHours() } _ ${ new Date().getSeconds() } ` ,
             de : `  ${ datos.email } ` ,
             mensaje : ` <p>  ${ datos.nombre } _ ${ datos.email } </p>
                      ${ datos.mensaje }`
@@ -76,7 +76,7 @@ exports.mensaje = (req, res) => {
         mail( email_data );
 
         res.json({
-            estatus: 'ok',
+            estatus: 'success',
             mensaje: 'El correo se envio de manera correcta',
         });
 

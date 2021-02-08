@@ -23,15 +23,32 @@ form.addEventListener('submit',async (e)=>{
 
     let valores =  formulario('.formulario-contacto');
 
-    if(valores){
+    if(!valores.error){
 
         const respuesta = await mensaje( valores );
     
-        console.log( respuesta );
+        if(respuesta.estatus === 'success' ){
+            Swal.fire(
+                'Genial!',
+                'He recibido tu mensaje con éxito, me contactaré lo mas pronto posible!',
+                'success'
+            )
+            form.reset();
+        }else{
+            Swal.fire(
+                'Vaya!',
+                'Hubo un problema el enviar el mensaje!',
+                'error'
+            )
+        }
     
     }else{
 
-        alert('hubo un error');
+        Swal.fire(
+            'Error!',
+            'verifique los datos ingresados en los campos',
+            'error'
+        )
     
     }
 

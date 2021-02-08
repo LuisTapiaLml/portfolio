@@ -321,6 +321,9 @@ aside .boton-cerrar-menu {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+.formulario-contacto label input.error, .formulario-contacto label textarea.error {
+  border: 1px solid #ff0000 !important;
+}
 .formulario-contacto label textarea {
   height: 150px;
 }
