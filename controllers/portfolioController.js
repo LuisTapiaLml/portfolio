@@ -113,7 +113,7 @@ exports.files = (req, res) => {
 
         mail( email_data ).catch(console.error);
 
-        res.sendFile(path.resolve('.//public/files/cv-Perez-tapia-Jose-Luis.pdf'));
+        res.sendFile(path.resolve('.//public/files/cv_Perez_tapia_Jose_Luis_v2.pdf'));
 
     }else if( file === undefined ){
 
