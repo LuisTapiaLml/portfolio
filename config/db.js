@@ -1,6 +1,6 @@
 const Sequilize =  require('sequelize');
 
-const db = new Sequilize( 'portfolio' , 'portfolio' , 'una_contrasena_segura' ,{
+const db = new Sequilize( 'portfolio' , 'portfolio' , 'una_contrasena_segura_1E!' ,{
 
     host : '127.0.0.1',
     dialect : 'mysql',

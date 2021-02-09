@@ -1,6 +1,6 @@
 create database if not exists  portfolio character set utf8 collate utf8_general_ci;
 
-create user 'portfolio'@'localhost' identified by 'una_contrasena_segura';
+create user 'portfolio'@'localhost' identified by 'una_contrasena_segura_1E!';
 
 grant all privileges on portfolio . * to 'portfolio'@'localhost' with grant option;
 
