@@ -26,7 +26,7 @@ exports.visita = async (req, res) => {
             mensaje : ''
         }
     
-        mail( email_data );
+        // mail( email_data );
 
     } catch (error) {
         
