@@ -13,3 +13,6 @@ values ( "QR Code Generator" , "Generador de Códigos QR" ,"http://www.qrcode.lu
 
 insert into proyectos ( `nombre`,`descripcion`,`url`,`img`, `createdAt`,`updateTimestamp`)  
 values ( "Organic Food" , "Landing page de restaurant de comida organica" ,"http://www.organic.luisptapia.com" , "organic.JPEG" , now() , now() );
+
+insert into proyectos ( `nombre`,`descripcion`,`url`,`img`, `createdAt`,`updateTimestamp`)  
+values ( "Sector" , "Landing tienda skate" ,"http://www.sector.luisptapia.com" , "sector.png" , now() , now() );
