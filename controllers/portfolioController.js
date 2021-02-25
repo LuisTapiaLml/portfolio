@@ -34,7 +34,11 @@ exports.visita = async (req, res) => {
     
     Registros.create({ tipo : 'visita' });
 
-    const proyectos =await Proyectos.findAll();
+    const proyectos =await Proyectos.findAll({
+        order: [
+            ['id', 'DESC'],
+        ]
+    });
     
     res.render('index', { _proyectos: proyectos });
 
