@@ -5,7 +5,6 @@ const bodyParser = require('body-parser');
 
 const portfoliorouter = require('./routes/routes');
 
-
 const db = require('./config/db');
 require('./models/Registros');
 require('./models/Proyectos');
@@ -28,11 +27,8 @@ app.use(bodyParser.json());
 app.set('view engine', 'pug');
 app.set("views", path.join(__dirname, "views"));
 
-
 app.use('/'  ,portfoliorouter );
 
 app.use( '/public', express.static(path.join(__dirname + '/public')) );
-
-
 
 app.listen(8080);
