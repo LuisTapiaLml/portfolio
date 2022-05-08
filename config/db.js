@@ -1,8 +1,9 @@
 const Sequilize =  require('sequelize');
+require('dotenv').config();
 
-const db = new Sequilize( 'portfolio' , 'portfolio' , 'una_contrasena_segura_1E!' ,{
+const db = new Sequilize( process.env.DB_NAME , process.env.DB_USER , process.env.DB_PASSWORD ,{
 
-    host : '127.0.0.1',
+    host :  process.env.DB_HOST ,
     dialect : 'mysql',
     port : '3306',
     operatorAliases: false,
@@ -17,6 +18,7 @@ const db = new Sequilize( 'portfolio' , 'portfolio' , 'una_contrasena_segura_1E!
         acquire:30000,
         idle:10000
     },
+
     timezone: "-06:00",
 });
 

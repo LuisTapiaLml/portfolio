@@ -16,3 +16,6 @@ values ( "Organic Food" , "Landing page de restaurant de comida organica" ,"http
 
 insert into proyectos ( `nombre`,`descripcion`,`url`,`img`, `createdAt`,`updateTimestamp`)  
 values ( "Sector" , "Landing tienda skate" ,"http://www.sector.luisptapia.com" , "sector.png" , now() , now() );
+
+insert into proyectos ( `nombre`,`descripcion`,`url`,`img`, `createdAt`,`updateTimestamp`)  
+values ( "Halloween" , "Halloween page" ,"http://www.halloween.luisptapia.com" , "halloween-img.jpg" , now() , now() );

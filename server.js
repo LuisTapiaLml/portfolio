@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const bodyParser = require('body-parser');
+require('dotenv').config();
 
 const portfoliorouter = require('./routes/routes');
 
@@ -9,6 +10,7 @@ const db = require('./config/db');
 require('./models/Registros');
 require('./models/Proyectos');
 require('./models/Mensajes');
+
 
 db.sync()
     .then( ()=>{
