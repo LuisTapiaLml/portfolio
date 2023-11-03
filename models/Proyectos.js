@@ -15,8 +15,10 @@ const Proyectos = db.define('proyectos',{
     descripcion : Sequilize.STRING(250),
 
     url : Sequilize.STRING(150),
+    
+    repositorio : Sequilize.STRING(250),
 
-    img : Sequilize.STRING(150)
+    img : Sequilize.STRING(250)
 
 },{
     

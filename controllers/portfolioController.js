@@ -26,7 +26,7 @@ exports.visita = async (req, res) => {
             mensaje : ''
         }
     
-        mail( email_data );
+        // mail( email_data );
 
     } catch (error) {
         
@@ -35,9 +35,9 @@ exports.visita = async (req, res) => {
     Registros.create({ tipo : 'visita' });
 
     const proyectos =await Proyectos.findAll({
-        order: [
-            ['id', 'DESC'],
-        ]
+        // order: [
+        //     ['id', 'DESC'],
+        // ]
     });
     
     res.render('index', { _proyectos: proyectos });

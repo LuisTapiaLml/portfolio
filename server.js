@@ -18,7 +18,7 @@ db.sync()
         console.log('conectado');
 
     }).catch(error => {
-
+        console.log('------- error');
         console.log(error);
 
     });
@@ -34,4 +34,4 @@ app.use( '/public', express.static(path.join(__dirname + '/public')) );
 
 app.use('/'  ,portfoliorouter );
 
-app.listen(8080);
+app.listen(process.env.APP_PORT);

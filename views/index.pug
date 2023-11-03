@@ -6,7 +6,8 @@ html(lang="en")
         title Portfolio
 
         link(rel="stylesheet", href="/public/css/sweetalert2.min.css")
-        link(rel="stylesheet", href="/public/css/all.min.css")
+        link(rel="stylesheet", href="/public/css/all.min.v6.css")
+        
         link(rel="stylesheet", href="/public/css/styles.css")
     body
 
@@ -27,7 +28,7 @@ html(lang="en")
                         img(src="https://fakeimg.pl/350x200/?text=LT", alt="profile image")
 
                     p.nombre.titulo Luis Tapia
-                    p Full stack jr Developer
+                    p Full stack Developer
 
                 div
                     section.info
@@ -39,7 +40,7 @@ html(lang="en")
                             span CDMX
                         div
                             span Edad:
-                            span 22
+                            span 25
                     
                     section.idiomas
                         article.idioma
@@ -62,12 +63,12 @@ html(lang="en")
                                     circle( cx="120" cy="120" r="110" stroke="#191923" stroke-width="15" )
                                     path( d="M120 10C140.286 10 160.178 15.6099 177.475 26.2096C194.772 36.8092 208.801 51.9857 218.011 70.061C227.221 88.1364 231.253 108.407 229.661 128.63C228.069 148.854 220.916 168.244 208.992 184.656C197.068 201.068 180.837 213.863 162.095 221.627C143.353 229.39 122.829 231.819 102.792 228.646C82.7555 225.472 63.9867 216.82 48.5607 203.645C33.1348 190.47 21.6526 173.285 15.3838 153.992" stroke="#FFC107" stroke-width="15" )
                                 .number
-                                    p 70
-                                        span %
+                                    p B2
+                                        span 
                             p.nombre-idioma Ingles
                     
                     section.descarga-cv
-                        a( href="/public/files/cv" target="_blank") Ver CV completo   
+                        a( href="https://bucket.luisptapia.com/files/cv%20Jose%20Luis%20Enrique%20P%C3%A9rez%20Tapia" target="_blank") Ver CV completo   
                             i.fas.fa-file
 
                 footer.footer-aside
@@ -83,30 +84,38 @@ html(lang="en")
                     h2.titulo Tecnologias
 
                     .skills
+                    
+                        div
+                            <img src="public/img/icons/microsoft-sql-server.svg" alt="sql server">
+                            span SQL Server
+                        div
+                            <img src="public/img/icons/mysql.svg" alt="mysql">
+                            span MySQL
+                        div
+                            i.fa-brands.fa-node-js
+                            span NodeJS
+                        div
+                            i.fab.fa-php
+                            span php
+                        div
+                            i.fab.fa-js
+                            span JavaScript
+                        div
+                            i.fab.fa-github
+                            span Git
+                        div
+                            i.fab.fa-react
+                            span ReactJs
+                        div
+                            i.fab.fa-sass
+                            span Sass
+                        
                         div
                             i.fab.fa-html5
                             span HTML5
                         div 
                             i.fab.fa-css3-alt
                             span CSS3
-                        div
-                            i.fab.fa-js
-                            span JavaScript
-                        div
-                            i.fab.fa-sass
-                            span Sass
-                        div
-                            i.fab.fa-react
-                            span ReactJs
-                        div
-                            i.fab.fa-php
-                            span php
-                        div
-                            <img src="public/img/icons/microsoft-sql-server.svg" alt="">
-                            span SQL Server
-                        div
-                            i.fab.fa-github
-                            span Git
 
                 section
                     h2.titulo Portfolio
@@ -114,33 +123,36 @@ html(lang="en")
                         each info_proyecto in _proyectos
                             article.proyecto
                                 .contenedor-imagen
-                                    img(src="public/img/" + info_proyecto.img , alt="imagen proyecto")
+                                    img(src= info_proyecto.img , alt="imagen proyecto")
                                 .descripcion
                                     span.titulo= info_proyecto.nombre
                                     p=  info_proyecto.descripcion
 
+                                    a( class="link" target="_blank" href=info_proyecto.repositorio style={color:'white'} ) Repositorio 
+                                        .fab.fa-github
+
                                     a( class="link" target="_blank" href=info_proyecto.url ) Ir a proyecto 
                                         .fas.fa-angle-right
                 
-                section
-                    h2.titulo Contacto
-                    form(class="formulario-contacto" novalidate ) 
-                        label
-                            .icono
-                                i.fas.fa-user-alt
-                            input(type="text" id="nombre" name="nombre" class="campo_data" placeholder="Nombre")
+                //- section
+                //-     h2.titulo Contacto
+                //-     form(class="formulario-contacto" novalidate ) 
+                //-         label
+                //-             .icono
+                //-                 i.fas.fa-user-alt
+                //-             input(type="text" id="nombre" name="nombre" class="campo_data" placeholder="Nombre")
 
-                        label
-                            .icono
-                                i.fas.fa-at
-                            input(type="email" id="email" name="email" class="campo_data" placeholder="Email")
+                //-         label
+                //-             .icono
+                //-                 i.fas.fa-at
+                //-             input(type="email" id="email" name="email" class="campo_data" placeholder="Email")
 
-                        label
-                            .icono
-                                i.fas.fa.fa-envelope
-                            textarea(name="mensaje" id="mensaje" class="campo_data" placeholder="Mensaje")
+                //-         label
+                //-             .icono
+                //-                 i.fas.fa.fa-envelope
+                //-             textarea(name="mensaje" id="mensaje" class="campo_data" placeholder="Mensaje")
 
-                        button.btn Enviar Mensaje
+                //-         button.btn Enviar Mensaje   
 
         script(src="/public/js/sweetalert2.all.min.js" )
         script(src="/public/js/main.js" type="module")
